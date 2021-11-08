@@ -27,7 +27,7 @@ void UKeepSimulationChangesComponent::EndPlay(const EEndPlayReason::Type EndPlay
 {
 	Super::EndPlay(EndPlayReason);
 
-	//FLevelEditorActionCallbacks::OnKeepSimulationChanges();
+	FLevelEditorActionCallbacks::OnKeepSimulationChanges(GetOwner());
 }
 
 
