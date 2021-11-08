@@ -28,7 +28,7 @@ void UKeepSimulationChangesComponent::EndPlay(const EEndPlayReason::Type EndPlay
 	UE_LOG(LogTemp, Warning, TEXT("BeforeSuper"));
 	Super::EndPlay(EndPlayReason);
 	UE_LOG(LogTemp, Warning, TEXT("AfterSuper"));
-	FLevelEditorActionCallbacks::OnKeepSimulationChanges(GetOwner());
+	FLevelEditorActionCallbacks::KeepSimulationChanges(GetOwner());
 }
 
 
