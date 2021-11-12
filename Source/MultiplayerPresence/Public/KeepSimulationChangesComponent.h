@@ -1,11 +1,13 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
+
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 
+#if WITH_EDITOR
 #include "Editor/LevelEditor/Public/LevelEditorActions.h"
+#endif
 
 #include "KeepSimulationChangesComponent.generated.h"
 

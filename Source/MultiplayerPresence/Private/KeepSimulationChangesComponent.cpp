@@ -1,6 +1,5 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
 #include "KeepSimulationChangesComponent.h"
 
 // Sets default values for this component's properties
@@ -25,10 +24,10 @@ void UKeepSimulationChangesComponent::BeginPlay()
 
 void UKeepSimulationChangesComponent::EndPlay(const EEndPlayReason::Type EndPlayReason)
 {
-	UE_LOG(LogTemp, Warning, TEXT("BeforeSuper"));
 	Super::EndPlay(EndPlayReason);
-	UE_LOG(LogTemp, Warning, TEXT("AfterSuper"));
+	#if WITH_EDITOR
 	FLevelEditorActionCallbacks::KeepSimulationChanges(GetOwner());
+	#endif
 }
 
 
@@ -40,4 +39,3 @@ void UKeepSimulationChangesComponent::TickComponent(float DeltaTime, ELevelTick 
 
 	// ...
 }
-
